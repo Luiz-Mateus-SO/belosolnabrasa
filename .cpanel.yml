@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/miubtqkc/public_html/belosolnabrasa.com.br/wp-content/themes/rest
-    - /bin/cp -R ./rest/* $DEPLOYPATH/
