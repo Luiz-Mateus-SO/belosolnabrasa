@@ -2,6 +2,7 @@
 // Template Name: Menu da Semana
 ?>
 <?php get_header(); ?>
+<h1>DEU TUDO CERTO</h1>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php if(have_rows('category_menu')): ?>
 			<?php include(TEMPLATEPATH . "/inc/cardapio.php"); ?>
