@@ -3,7 +3,6 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<h1>DEU TUDO CERTO</h1>
 	<?php if(have_rows('category_menu')): ?>
 			<?php include(TEMPLATEPATH . "/inc/cardapio.php"); ?>
 	<?php endif; ?>
