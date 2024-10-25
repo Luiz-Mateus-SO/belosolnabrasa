@@ -1,32 +1,34 @@
-function verificarHora() {
-  const elementoDia = document.getElementById('dia-da-semana');
-  const agora = new Date();
-  const horaAtual = agora.getHours();
+document.addEventListener('DOMContentLoaded', () => {
+  function verificarHora() {
+    const elementoDia = document.getElementById('dia-da-semana');
+    const agora = new Date();
+    const horaAtual = agora.getHours();
 
-  if (horaAtual === 14) {
+    if (horaAtual === 14) {
       elementoDia.innerText = "Fechado";
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
-  } else if (horaAtual === 6) {
+    } else if (horaAtual === 6) {
       location.reload();
+    }
   }
-}
 
-function configurarVerificacaoAposFechado() {
-  const agora = new Date();
-  const proximaSeisHoras = new Date(
+  function configurarVerificacaoAposFechado() {
+    const agora = new Date();
+    const proximaSeisHoras = new Date(
       agora.getFullYear(),
       agora.getMonth(),
       agora.getDate() + 1,
       6, 0, 0
-  );
+    );
 
-  const tempoParaSeisHoras = proximaSeisHoras - agora;
+    const tempoParaSeisHoras = proximaSeisHoras - agora;
 
-  setTimeout(() => {
+    setTimeout(() => {
       location.reload();
-  }, tempoParaSeisHoras);
-}
+    }, tempoParaSeisHoras);
+  }
 
-let intervaloHora = setInterval(verificarHora, 3600000);
-verificarHora();
+  let intervaloHora = setInterval(verificarHora, 3600000);
+  verificarHora();
+});
