@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const agora = new Date();
     const horaAtual = agora.getHours();
 
-    if (horaAtual >= 17 && (horaAtual > 16 || agora.getMinutes() === 40)) {
+    if (horaAtual >= 16 && (horaAtual > 16 || agora.getMinutes() === 44)) {
       elementoDia.innerText = "Fechado";
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
