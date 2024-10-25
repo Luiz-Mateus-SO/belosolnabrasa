@@ -13,11 +13,4 @@
 
   // Habilitar Menus
   add_theme_support('menus');
-
-  function adicionar_meu_script_js() {
-    // wp_enqueue_script: nome do script, caminho do arquivo JS, dependências (vazio aqui), versão, se deve carregar no footer
-    wp_enqueue_script('traducao-data', get_template_directory_uri() . '/js/traducao-data.js', array(), null, true);
-  }
-  add_action('wp_enqueue_scripts', 'adicionar_meu_script_js');
-
 ?>
