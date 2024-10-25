@@ -1,11 +1,11 @@
 const traducaoDias = {
-  "Sunday": "Domingo",
-  "Monday": "Segunda-feira",
-  "Tuesday": "Terça-feira",
-  "Wednesday": "Quarta-feira",
-  "Thursday": "Quinta-feira",
-  "Friday": "Sexta-feira",
-  "Saturday": "Sábado"
+  "Domingo": "Domingo",
+  "Segunda": "Segunda-feira",
+  "Terça": "Terça-feira",
+  "Quarta": "Quarta-feira",
+  "Quinta": "Quinta-feira",
+  "Sexta": "Sexta-feira",
+  "Sábado": "Sábado"
 };
 
 // Obtenha o elemento com o dia da semana
