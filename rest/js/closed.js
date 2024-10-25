@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const agora = new Date();
     const horaAtual = agora.getHours();
 
-    if (horaAtual >= 16 && (horaAtual > 16 || agora.getMinutes() === 48)) {
+    if (horaAtual >= 14) {
       elementoDia.innerText = "Fechado";
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
-    } else if (horaAtual === 16 && (horaAtual > 16 || agora.getMinutes() === 58)) {
+    } else if (horaAtual === 6) {
       location.reload();
     }
   }
@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, tempoParaSeisHoras);
   }
 
-  let intervaloHora = setInterval(verificarHora, 60000);
+  let intervaloHora = setInterval(verificarHora, 3600000);
   verificarHora();
 });
