@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const elementoDia = document.getElementById('dia-da-semana');
     const agora = new Date();
     const horaAtual = agora.getHours();
+    const minutosAtual = agora.getMinutes();
 
-    if (horaAtual >= 14) {
+    // Use os valores passados do PHP
+    const horaFechamento = meusDados.horaFechamento;
+    const minutosFechamento = meusDados.minutosFechamento;
+    const horaAbertura = meusDados.horaAbertura; // Adiciona a hora de abertura
+    const minutosAbertura = meusDados.minutosAbertura; // Adiciona os minutos de abertura
+
+    // Verifica se está no horário de fechamento
+    if (horaAtual > horaFechamento || (horaAtual === horaFechamento && minutosAtual >= minutosFechamento)) {
       elementoDia.innerText = "Fechado";
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
-    } else if (horaAtual === 6) {
-      location.reload();
+    } 
+    // Verifica se está no horário de abertura
+    else if (horaAtual === horaAbertura && minutosAtual === minutosAbertura) {
+      location.reload(); // Recarrega a página se for o horário de abertura
     }
   }
 
@@ -29,6 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, tempoParaSeisHoras);
   }
 
-  let intervaloHora = setInterval(verificarHora, 3600000);
+  let intervaloHora = setInterval(verificarHora, 3600000); // Checa a cada minuto
   verificarHora();
 });

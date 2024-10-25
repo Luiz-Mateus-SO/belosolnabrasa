@@ -4,16 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?php bloginfo('name'); ?> | <?php wp_title(''); ?> <?php the_field('seo_title'); ?></title>
-    <meta name="description" content="<?php bloginfo('name'); ?> | <?php wp_title(''); ?> <?php the_field('seo_description'); ?>">
+        <meta name="description" content="<?php bloginfo('name'); ?> | <?php wp_title(''); ?> <?php the_field('seo_description'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
-    <?php wp_head(); ?>
+        <?php wp_head(); ?>
 	</head>
 
 	<body>
-		
 		<header>
 			<nav>
         <?php
@@ -34,13 +32,12 @@
 			$dia_semana = ucfirst($dia_semana);
 
 			if ($dia_semana === "Domingo") {
-					$dia_semana = "Fechado"; 
+				$dia_semana = "Fechado"; 
 			} elseif ($dia_semana === "Sábado") {
-					$dia_semana = "Fechado";
+				$dia_semana = "Fechado";
 			} else {
-					$dia_semana = $dia_semana . "-feira";
+				$dia_semana = $dia_semana . "-feira";
 			}
-	
 
 			echo "<div class='dia-da-semana-container'><h2 id='dia-da-semana'>{$dia_semana}</h2><span class='divisor'></span></div>";
 			?>
