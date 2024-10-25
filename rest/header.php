@@ -34,7 +34,7 @@
 			$dia_semana = strftime("%A", strtotime($data));
 			$dia_semana = ucfirst($dia_semana);
 
-			if ($hora_atual >= 14) {
+			if ($hora_atual >= 16) {
 					$dia_semana = "Fechado";
 			} else {
 					if ($dia_semana === "Domingo") {
