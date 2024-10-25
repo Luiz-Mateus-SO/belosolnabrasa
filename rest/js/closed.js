@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, tempoParaSeisHoras);
   }
 
-  let intervaloHora = setInterval(verificarHora, 3600000); // Checa a cada minuto
+  let intervaloHora = setInterval(verificarHora, 60000);
   verificarHora();
 });
