@@ -23,9 +23,10 @@
 		<?php endwhile; else : endif; ?>
 	</section>
 
+<?php $contato = get_page_by_title('Contato'); ?>
 	<div class="contact-btn__container">
 		<button class="contact_btn">
-			<a href="<?php the_field('contact_link'); ?>">Faça seu Pedido</a>
+			<a href="<?php the_field('contact_link', $contato); ?>">Faça seu Pedido</a>
 		</button>
 	</div>
 <?php endwhile; else : endif; ?>
