@@ -1,4 +1,16 @@
 <?php 
+  function my_scripts() {
+    wp_register_scripts('closed', get_template_directory_uri() . '/js/closed.js', [], false, true)
+  }
+  add_actions('wp_enqueue_scripts', 'my_scripts');
+
+  function belosol_css() {
+    wp_register_style('belosol-style', get_template_directory_uri() . 'style.css', array(), false, false)
+  }
+  add_actions('wp_enqueue_scripts', 'belosol_css');
+
+
+
   // Funções para Limpar o Header
   remove_action('wp_head', 'rsd_link');
   remove_action('wp_head', 'wlwmanifest_link');
@@ -14,15 +26,4 @@
   // Habilitar Menus
   add_theme_support('menus');
 
-  // Função para carregar o arquivo fechado.js
-  function carregar_fechado_js() {
-      wp_enqueue_script(
-          'fechado-script', // Nome do script
-          get_template_directory_uri() . '/rest/js/fechado.js', // Caminho para o arquivo JS
-          array(), // Dependências (se houver)
-          null, // Versão do script (null para usar a versão do tema)
-          true // Colocar o script no footer
-      );
-  }
-  add_action('wp_enqueue_scripts', 'carregar_fechado_js');
 ?>
