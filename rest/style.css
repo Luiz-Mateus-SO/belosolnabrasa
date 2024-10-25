@@ -577,6 +577,26 @@ header {
 	padding-bottom: 30px;
 }
 
+.dia-da-semana-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+#dia-da-semana {
+	font-size: 1.7em;
+}
+
+.divisor {
+	display: inline-block;
+	width: 80px;
+	height: 2px;
+	background: #fdcb29;
+	margin: 0 auto;
+}
+
 header nav {
 	background: #202020;
 	max-width: 340px;
@@ -608,7 +628,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	color: #f17060;
+	color: hsla(39,100%,68%,1);
 }
 
 header img {
@@ -658,7 +678,7 @@ section.container {
 
 .menu-prato h2 {
 	font-size: 2.25em;
-	color: #f17060;
+	color: hsla(39,100%,68%,1);
 	padding: 0px 100px 10px 0;
 	border-bottom: 1px dashed #373532;
 }
@@ -741,7 +761,7 @@ header nav {
 }
 
 .nav-footer .current_page_item a {
-	color: #f17060;
+	color: hsla(39,100%,68%,1);
 }
 
 footer {
@@ -771,12 +791,12 @@ footer {
 }
 
 .current_page_item a {
-	color: #f17060;
+	color: hsla(39,100%,68%,1);
 }
 
 .contato-item h2{
 	font-size: 1.5em;
-	color: #f17060;
+	color: hsla(39,100%,68%,1);
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
@@ -832,6 +852,13 @@ footer {
 	padding: 20px 0px 10px 0;
 }
 
+.sobre div h2 {
+	padding-right: 0;
+}
+
+.sobre p {
+	padding-right: 0;
+}
 }
 
 @media (max-width: 768px) {
