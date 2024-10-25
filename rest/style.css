@@ -881,3 +881,15 @@ footer {
 	}
 	
 }
+
+a.banner-link {
+	color: white;
+	text-decoration: none;
+	transition: .2s all ease-in-out;
+}
+
+a.banner-link:hover {
+	color: #fdcb29;
+	transform: scale(1.1);
+	transition: .2s all ease-in-out;
+}
