@@ -36,6 +36,7 @@
 				if ($dia_semana === "Domingo") {
 						$dia_semana = "Fechado";
 				} elseif ($dia_semana === "Sábado") {
+					$dia_semana = "Fechado";
 				} else {
 						$dia_semana = $dia_semana . "-feira";
 				}
