@@ -34,17 +34,14 @@
 			$dia_semana = strftime("%A", strtotime($data));
 			$dia_semana = ucfirst($dia_semana);
 
-			if ($hora_atual >= 16) {
+			if ($dia_semana === "Domingo") {
+					$dia_semana = "Fechado"; 
+			} elseif ($dia_semana === "Sábado") {
 					$dia_semana = "Fechado";
 			} else {
-					if ($dia_semana === "Domingo") {
-							$dia_semana = "Fechado"; 
-					} elseif ($dia_semana === "Sábado") {
-							$dia_semana = "Fechado";
-					} else {
-							$dia_semana = $dia_semana . "-feira";
-					}
+					$dia_semana = $dia_semana . "-feira";
 			}
+	
 
 			echo "<div class='dia-da-semana-container'><h2 id='dia-da-semana'>{$dia_semana}</h2><span class='divisor'></span></div>";
 			?>
