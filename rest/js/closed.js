@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function configurarVerificacaoAposFechado() {
+ function configurarVerificacaoAposFechado() {
     const agora = new Date();
     const proximaSeisHoras = new Date(
       agora.getFullYear(),
