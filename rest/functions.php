@@ -1,23 +1,12 @@
 <?php 
 function my_scripts() {
-  // Registra o script
-  wp_register_script('closed', get_template_directory_uri() . '/js/closed.js', [], false, true);
-  
-  // Localiza os dados do PHP para o JavaScript
-  wp_localize_script('closed', 'meusDados', [
-      'horaFechamento' => get_field('hora_de_fechamento'),
-      'minutosFechamento' => get_field('minutos_de_fechamento'),
-      'horaAbertura' => get_field('hora_de_abertura'),
-      'minutosAbertura' => get_field('minutos_de_abertura'),
-  ]);
-
-  // Enfileira o script
-  wp_enqueue_script('closed');
+    wp_register_script('closed', get_template_directory_uri() . '/js/closed.js', [], false, true);
+    wp_enqueue_script('closed'); // Enqueue the script
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 
 function belosol_css() {
-    wp_register_style('belosol-style', get_template_directory_uri() . '/style.css', [], false);
+    wp_register_style('belosol-style', get_template_directory_uri() . '/style.css', array(), false, false);
     wp_enqueue_style('belosol-style'); // Enqueue the style
 }
 add_action('wp_enqueue_scripts', 'belosol_css');
