@@ -31,6 +31,7 @@
 			setlocale(LC_TIME, 'pt_BR.UTF-8');
 			$data = date("Y-m-d");
 			$dia_semana = strftime("%A", strtotime($data));
+			$dia_semana = ucfirst($dia_semana);
 			echo "<div class='dia-da-semana-container'><h2 id='dia-da-semana'>{$dia_semana}</h2><span class='divisor'></span></div>";
 			?>
 			
