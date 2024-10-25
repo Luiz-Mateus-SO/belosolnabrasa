@@ -22,6 +22,12 @@
 			</div>
 		<?php endwhile; else : endif; ?>
 	</section>
+
+	<div class="contact-btn__container">
+		<button class="contact_btn">
+			<a href="<?php the_field('contact_link'); ?>">Faça seu Pedido</a>
+		</button>
+	</div>
 <?php endwhile; else : endif; ?>
 
 

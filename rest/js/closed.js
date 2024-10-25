@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const agora = new Date();
     const horaAtual = agora.getHours();
 
-    if (horaAtual >= 16 && (horaAtual > 16 || agora.getMinutes() === 44)) {
+    if (horaAtual >= 16 && (horaAtual > 16 || agora.getMinutes() === 48)) {
       elementoDia.innerText = "Fechado";
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
-    } else if (horaAtual === 6) {
+    } else if (horaAtual === 16 && (horaAtual > 16 || agora.getMinutes() === 58)) {
       location.reload();
     }
   }
