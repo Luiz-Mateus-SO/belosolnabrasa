@@ -37,5 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
     dayEl.style.color = openedColor
   }
 
-  openingHours(10, 14)
+  openingHours(14)
 });
