@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let todayIs = getNameWeekDay(date);
-  if (todayIs == 'Domingo') {
+  if (todayIs == 'Domingo' || 'Sábado') {
     todayIs = closedMessage;
     dayEl.innerText = todayIs;
     dayEl.style.color = closedColor;
