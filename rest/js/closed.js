@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (horaAtual >= 14) {
       elementoDia.innerText = "Fechado";
+      elementoDia.style.color = "#ff3838"
       clearInterval(intervaloHora);
       configurarVerificacaoAposFechado();
     } else if (horaAtual === 6) {
       location.reload();
+      elementoDia.style.color = "#57ff1e"
     }
   }
 
