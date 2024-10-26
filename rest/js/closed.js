@@ -19,19 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openingHours(closeHour) {
-    // obter a hora atual
     const now = date.getHours();
-    // verificar se a hora atual corresponde ao horario de funcionamento
     if(now >= closeHour) {
       todayIs = closedMessage;
       dayEl.innerText = todayIs;
       dayEl.style.color = closedColor;
     } 
-    // estilizar o texto para o formato correto (fechado, (dia da semana) e coloração)
   }
 
   let todayIs = getNameWeekDay(date);
-  if (todayIs == 'Domingo' || 'Sábado') {
+  if (todayIs == 'Domingo') {
     todayIs = closedMessage;
     dayEl.innerText = todayIs;
     dayEl.style.color = closedColor;
