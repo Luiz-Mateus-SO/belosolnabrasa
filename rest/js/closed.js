@@ -1,36 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-  function verificarHora() {
-    const elementoDia = document.getElementById('dia-da-semana');
-    const agora = new Date();
-    const horaAtual = agora.getHours();
-
-    if (horaAtual >= 14) {
-      elementoDia.innerText = "Fechado";
-      elementoDia.style.color = "#ff3838"
-      clearInterval(intervaloHora);
-      configurarVerificacaoAposFechado();
-    } else if (horaAtual === 6) {
-      location.reload();
-      elementoDia.style.color = "#57ff1e"
-    }
+  const dayEl = document.getElementById('dia-da-semana');
+  const date = new Date();
+  const closedColor = "rgb(237, 92, 92)";
+  const openedColor = "#57ff1e"
+  const closedMessage = "Fechado"
+  
+  function getNameWeekDay(today) {
+    const weekDays = [
+      'Domingo',
+      'Segunda-feira',
+      'Terça-feira',
+      'Quarta-feira',
+      'Quinta-feira',
+      'Sexta-feira',
+      'Sábado'
+    ]
+    return weekDays[today.getDay()]
   }
 
- function configurarVerificacaoAposFechado() {
-    const agora = new Date();
-    const proximaSeisHoras = new Date(
-      agora.getFullYear(),
-      agora.getMonth(),
-      agora.getDate() + 1,
-      6, 0, 0
-    );
-
-    const tempoParaSeisHoras = proximaSeisHoras - agora;
-
-    setTimeout(() => {
-      location.reload();
-    }, tempoParaSeisHoras);
+  function openingHours(closeHour) {
+    // obter a hora atual
+    const now = date.getHours();
+    // verificar se a hora atual corresponde ao horario de funcionamento
+    if(now >= closeHour) {
+      todayIs = closedMessage;
+      dayEl.innerText = todayIs;
+      dayEl.style.color = closedColor;
+    } 
+    // estilizar o texto para o formato correto (fechado, (dia da semana) e coloração)
   }
 
-  let intervaloHora = setInterval(verificarHora, 3600000);
-  verificarHora();
+  let todayIs = getNameWeekDay(date);
+  if (todayIs == 'Domingo' || 'Sábado') {
+    todayIs = closedMessage;
+    dayEl.innerText = todayIs;
+    dayEl.style.color = closedColor;
+  } else {
+    dayEl.innerText = todayIs;
+    dayEl.style.color = openedColor
+  }
+
+  openingHours(10, 14)
 });
