@@ -859,6 +859,10 @@ footer {
 .sobre p {
 	padding-right: 0;
 }
+
+.telefone {
+	font-size: 1.123em;
+}
 }
 
 @media (max-width: 768px) {
