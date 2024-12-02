@@ -2,6 +2,10 @@
 function my_scripts() {
     wp_register_script('closed', get_template_directory_uri() . '/js/closed.js', [], false, true);
     wp_enqueue_script('closed'); // Enqueue the script
+
+    // Registra o script menu-functions.js
+    wp_register_script('menu-functions', get_template_directory_uri() . '/js/menu-functions.js', [], false, true);
+    wp_enqueue_script('menu-functions'); // Enqueue o script menu-functions.js
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 
