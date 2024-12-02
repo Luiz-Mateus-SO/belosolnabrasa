@@ -1,6 +1,31 @@
 <?php
 // Template Name: Menu da Semana
 ?>
+
+<style>
+.acompanhamentos-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.acompanhamentos-titulo {
+    color: rgb(237, 92, 92);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.acompanhamentos-do-dia {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+</style>
+
 <?php get_header(); ?>
 <section class="acompanhamentos-container">
     <h2 class="acompanhamentos-titulo">Acompanhamentos do dia:</h2>
