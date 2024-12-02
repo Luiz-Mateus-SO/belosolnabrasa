@@ -2,6 +2,10 @@
 // Template Name: Menu da Semana
 ?>
 <?php get_header(); ?>
+<section class="acompanhamentos-container">
+    <h2 class="acompanhamentos-titulo">Acompanhamentos do dia: </h2>
+    <span class="acompanhamentos-do-dia"><?php the_field('acompanhamentos'); ?></span>
+</section>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php if(have_rows('category_menu')): ?>
 			<?php include(TEMPLATEPATH . "/inc/cardapio.php"); ?>
