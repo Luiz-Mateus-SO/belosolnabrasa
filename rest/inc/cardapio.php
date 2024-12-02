@@ -9,6 +9,7 @@
                     <?php if(have_rows('options')): while(have_rows('options')) : the_row(); ?>
                         <li class="prato" 
                             data-exibir-prato="<?php the_sub_field('exibir-prato'); ?>"
+                            <?php if( get_sub_field('exibir-prato') ) echo 'class="ativo"'; ?>>
                             <span><sup>R$</sup><?php the_sub_field('price'); ?></span>
                             <div>
                                 <h3><?php the_sub_field('food_name'); ?></h3>
