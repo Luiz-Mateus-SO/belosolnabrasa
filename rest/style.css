@@ -897,3 +897,23 @@ a.banner-link:hover {
 	transform: scale(1.1);
 	transition: .2s all ease-in-out;
 }
+
+/* Acompanhamentos */
+.acompanhamentos-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.acompanhamentos-titulo {
+	color: hsla(39,100%,68%,1);
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.acompanhamentos-do-dia {
+	color: white;
+	text-align: center;
+	font-size: 1.1em;
+
+}
