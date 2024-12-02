@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 <section class="acompanhamentos-container">
     <h2 class="acompanhamentos-titulo">Acompanhamentos do dia: </h2>
-    <span class="acompanhamentos-do-dia"><?php the_field('acompanhamentos'); ?></span>
+    <p class="acompanhamentos-do-dia"><?php the_field('acompanhamentos'); ?></p>
 </section>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php if(have_rows('category_menu')): ?>

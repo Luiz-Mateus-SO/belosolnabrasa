@@ -899,19 +899,19 @@ a.banner-link:hover {
 }
 
 /* Acompanhamentos */
-.acompanhamentos-container {
+section.acompanhamentos-container {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
 
-.acompanhamentos-titulo {
+h2.acompanhamentos-titulo {
 	color: hsla(39,100%,68%,1);
 	text-align: center;
 	font-size: 1.5em;
 }
 
-.acompanhamentos-do-dia {
+span.acompanhamentos-do-dia {
 	color: white;
 	text-align: center;
 	font-size: 1.1em;
