@@ -9,6 +9,11 @@ function my_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 
+function theme_enqueue_font_awesome() {
+    wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/a076d05399.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_font_awesome');
+
 function belosol_css() {
     wp_register_style('belosol-style', get_template_directory_uri() . '/style.css', array(), false, false);
     wp_enqueue_style('belosol-style'); // Enqueue the style
