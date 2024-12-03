@@ -73,7 +73,6 @@
 		margin-right: 0;
 	}
 }
-
 </style>
 
 <?php get_header(); ?>
