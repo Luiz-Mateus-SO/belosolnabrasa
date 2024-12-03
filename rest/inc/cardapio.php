@@ -8,13 +8,14 @@
                 <ul>
                     <?php if(have_rows('options')): while(have_rows('options')) : the_row(); ?>
                         <li class="prato" 
-                            data-exibir-prato="<?php the_sub_field('exibir-prato'); ?>"
-                            <?php if( get_sub_field('exibir-prato') ) echo 'class="ativo"'; ?>>
+                            data-exibir-prato="<?php the_sub_field('exibir_prato'); ?>"
+                            <?php if( get_sub_field('exibir_prato') ) echo 'class="ativo"'; ?>>
                             <span><sup>R$</sup><?php the_sub_field('price'); ?></span>
                             <div>
                                 <h3><?php the_sub_field('food_name'); ?></h3>
                                 <p class="food_description"><?php the_sub_field('food_description'); ?></p>
                             </div>
+                            <button class="whatsapp-buy-btn"><a href="<?php the_sub_field('product_link'); ?>" class="whatsapp-buy-btn__link"><i class="fa-solid fa-bag-shopping"></i></a></button>
                         </li>
                     <?php endwhile; else : endif; ?>
                 </ul>

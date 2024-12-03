@@ -16,6 +16,10 @@ Version: 1.0
  * Remove anchor text-decoration
  */ 
 
+.fa-bag-shopping {
+	color: #cf2e2e!important;
+}
+
 .lm {
 	text-decoration: none;
 	color: white!important;
