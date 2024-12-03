@@ -25,6 +25,10 @@
     justify-content: center;
 }
 
+.menu-prato span {
+		margin-right: 12px;
+	}
+
 .prato {
 	position: relative;
 }
