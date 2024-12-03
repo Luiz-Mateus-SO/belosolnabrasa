@@ -21,11 +21,11 @@
             </div>
         <?php endwhile; else : endif; ?>
     </section>
-    <?php $contato = get_page_by_title('Contato'); ?>
-    <div class="contact-btn__container">
-            <button class="contact_btn">
-                    <a href="<?php the_field('contact_link', $contato); ?>">Faça seu pedido</a>
-            </button>
-    </div>
+		<?php $contato = get_page_by_title('Contato'); ?>
+		<div class="contact-btn__container">
+				<button class="contact_btn">
+						<a href="<?php the_field('contact_link', $contato); ?>">Faça seu pedido</a>
+				</button>
+		</div>
 <?php endwhile; else: endif; ?>
 
