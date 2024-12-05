@@ -15,7 +15,6 @@
 	<body>
 		
 		<header>
-			<div class="nav__container">
 				<nav>
 					<?php
 						$args = array(
@@ -35,5 +34,4 @@
 				<?php $contato = get_page_by_title('contato'); ?>
 				<p><?php the_field('header_adress', $contato); ?></p>
 				<p class="telefone"><?php the_field('header_phone', $contato); ?></p>
-			</div>
 		</header>
