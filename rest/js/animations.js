@@ -6,12 +6,12 @@ function activeAnimateOneEl(event, el, animeteClass) {
   });  
 }
 
-function activeAnimateAllChildren(event, dadEl, animeteClass) {
+function activeAnimateAllChildren(event, dadEl, animateClass) {
   document.addEventListener(event, () => {
     const elChildrens = document.querySelector(dadEl).childNodes;
     
     elChildrens.forEach(children => {
-      children.classList.add(animeteClass)
+      children.classList.add(animateClass)
     })
   });  
 }
