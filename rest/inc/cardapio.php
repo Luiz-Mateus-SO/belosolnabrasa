@@ -20,13 +20,13 @@
                     <?php endwhile; else : endif; ?>
                 </ul>
             </div>
+            <?php $contato = get_page_by_title('Contato'); ?>
+            <div class="contact-btn__container">
+                    <button class="contact_btn">
+                            <a href="<?php the_field('contact_link', $contato); ?>">Faça seu pedido</a>
+                    </button>
+            </div>
         <?php endwhile; else : endif; ?>
-		<?php $contato = get_page_by_title('Contato'); ?>
-		<div class="contact-btn__container">
-				<button class="contact_btn">
-						<a href="<?php the_field('contact_link', $contato); ?>">Faça seu pedido</a>
-				</button>
-		</div>
     </section>
 <?php endwhile; else: endif; ?>
 
