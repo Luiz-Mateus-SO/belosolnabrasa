@@ -1,4 +1,4 @@
-function logotipoAnimation(event, el, animeteClass) {
+function activeAnimation(event, el, animeteClass) {
   document.addEventListener(event, () => {
     const logotipo = document.querySelector(el);
 
@@ -7,7 +7,8 @@ function logotipoAnimation(event, el, animeteClass) {
 }
 
 const initAnimation = () => {
-  logotipoAnimation("DOMContentLoaded", ".logotipo", "animate")
+  activeAnimation("DOMContentLoaded", ".logotipo", "animate")
+  activeAnimation("DOMContentLoaded", "header", "animate")
 }
 
 initAnimation()

@@ -951,6 +951,21 @@ height: 22px;
 }
 }
 
+.logotipo {
+  opacity: 0; /* Invisível inicialmente */
+}
+
+.logotipo.animate {
+  animation: slideDownFadeIn 1s ease forwards;
+}
+
+header {
+	opacity: 0;
+}
+
+header.animate {
+	animation: opacityHeader 0.5s ease forwards;
+}
 
 @keyframes slideDownFadeIn {
   0% {
@@ -963,11 +978,11 @@ height: 22px;
   }
 }
 
-.logotipo {
-  opacity: 0; /* Invisível inicialmente */
+@keyframes opacityHeader {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-
-.logotipo.animate {
-  animation: slideDownFadeIn 0.8s ease forwards;
-}
-
