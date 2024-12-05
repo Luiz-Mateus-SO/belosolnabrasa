@@ -25,10 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
   }
+
+  function removeExtraWppBtn(btn) {
+    const contactBtnList = document.querySelectorAll(btn);
+    contactBtnList.forEach(item => {
+      let previousItemEl = item.previousElementSibling.classList.value;
+      if(previousItemEl != 'container') {
+        item.remove()
+      }
+    })
+  }
   
   const init = () => {
     exibirPratos('data-exibir-prato')
     verifyContents('li', 'div')
+    removeExtraWppBtn('.contact-btn__container')
   }
 
   init()
