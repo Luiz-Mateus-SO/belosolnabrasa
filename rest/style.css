@@ -975,7 +975,6 @@ header > *.animate {
   animation: slideDownFadeIn 1s ease forwards;
 }
 
-
 @keyframes slideDownFadeIn {
   0% {
     opacity: 0; /* Invisível */
