@@ -6,9 +6,9 @@ function activeAnimateOneEl(event, el, animeteClass) {
   });  
 }
 
-function activeAnimateAllChildren(event, dadEl, animateClass) {
+function activeAnimateAllChildren(event, selector, animateClass) {
   document.addEventListener(event, () => {
-    const elChildrens = document.querySelector(dadEl).childNodes;
+    const elChildrens = document.querySelectorAll(selector);
     
     elChildrens.forEach(children => {
       children.classList.add(animateClass)
@@ -18,7 +18,7 @@ function activeAnimateAllChildren(event, dadEl, animateClass) {
 
 const initAnimation = () => {
   activeAnimateOneEl("DOMContentLoaded", ".logotipo", "animate")
-  activeAnimateAllChildren("DOMContentLoaded", "header", "animate")
+  activeAnimateAllChildren("DOMContentLoaded", "header > *", "animate")
 }
 
 initAnimation()
