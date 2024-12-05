@@ -967,7 +967,7 @@ header > *.animate {
   animation: slideDownFadeIn 1s ease forwards;
 }
 
-.acompanhamentos-container {
+.acompanhamentos-container > * {
 	opacity: 0;
 }
 
