@@ -19,6 +19,7 @@ function activeAnimateAllChildren(event, selector, animateClass) {
 const initAnimation = () => {
   activeAnimateOneEl("DOMContentLoaded", ".logotipo", "animate")
   activeAnimateAllChildren("DOMContentLoaded", "header > *", "animate")
+  activeAnimateAllChildren("DOMContentLoaded", ".acompanhamentos-container > *.animate", "animate")
 }
 
 initAnimation()
