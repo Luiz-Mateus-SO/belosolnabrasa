@@ -1,14 +1,24 @@
-function activeAnimation(event, el, animeteClass) {
+function activeAnimateOneEl(event, el, animeteClass) {
   document.addEventListener(event, () => {
-    const logotipo = document.querySelector(el);
+    const elSelect = document.querySelector(el);
 
-    logotipo.classList.add(animeteClass);
+    elSelect.classList.add(animeteClass);
+  });  
+}
+
+function activeAnimateAllChildren(event, dadEl, animeteClass) {
+  document.addEventListener(event, () => {
+    const elChildrens = document.querySelector(dadEl).childNodes;
+    
+    elChildrens.forEach(children => {
+      children.classList.add(animeteClass)
+    })
   });  
 }
 
 const initAnimation = () => {
-  activeAnimation("DOMContentLoaded", ".logotipo", "animate")
-  activeAnimation("DOMContentLoaded", "header div", "animate")
+  activeAnimateOneEl("DOMContentLoaded", ".logotipo", "animate")
+  activeAnimateAllChildren("DOMContentLoaded", "header", "animate")
 }
 
 initAnimation()

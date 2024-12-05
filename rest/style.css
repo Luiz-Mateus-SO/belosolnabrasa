@@ -963,7 +963,7 @@ header div {
 	opacity: 0;
 }
 
-header div.animate {
+header *.animate {
 	animation: slideDownFadeIn 1.2s ease forwards;
 }
 
