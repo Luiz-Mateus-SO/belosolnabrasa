@@ -15,23 +15,25 @@
 	<body>
 		
 		<header>
-			<nav>
-        <?php
-          $args = array(
-            'menu' => 'principal',
-            'container' => false
-          );
-          wp_nav_menu( $args );
-        ?>
-			</nav>
+			<div class="nav__container">
+				<nav>
+					<?php
+						$args = array(
+							'menu' => 'principal',
+							'container' => false
+						);
+						wp_nav_menu( $args );
+					?>
+				</nav>
 
-			<h1><img class="logotipo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/Belo-Sol.webp" alt="<?php bloginfo('name'); ?>"></h1>
-			<div class='dia-da-semana-container'>
-				<h2 id='dia-da-semana'></h2>
-				<span class='divisor'></span>
+				<h1><img class="logotipo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/Belo-Sol.webp" alt="<?php bloginfo('name'); ?>"></h1>
+				<div class='dia-da-semana-container'>
+					<h2 id='dia-da-semana'></h2>
+					<span class='divisor'></span>
+				</div>
+
+				<?php $contato = get_page_by_title('contato'); ?>
+				<p><?php the_field('header_adress', $contato); ?></p>
+				<p class="telefone"><?php the_field('header_phone', $contato); ?></p>
 			</div>
-
-      <?php $contato = get_page_by_title('contato'); ?>
-			<p><?php the_field('header_adress', $contato); ?></p>
-			<p class="telefone"><?php the_field('header_phone', $contato); ?></p>
 		</header>

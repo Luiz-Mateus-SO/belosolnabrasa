@@ -8,7 +8,7 @@ function activeAnimation(event, el, animeteClass) {
 
 const initAnimation = () => {
   activeAnimation("DOMContentLoaded", ".logotipo", "animate")
-  activeAnimation("DOMContentLoaded", "header", "animate")
+  activeAnimation("DOMContentLoaded", "header div", "animate")
 }
 
 initAnimation()
