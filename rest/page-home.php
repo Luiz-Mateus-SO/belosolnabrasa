@@ -11,7 +11,7 @@
 }
 
 .acompanhamentos-titulo {
-    color: rgb(237, 92, 92);
+    color: rgb(86 255 31);
     text-align: center;
     font-size: 1.5em;
 }
