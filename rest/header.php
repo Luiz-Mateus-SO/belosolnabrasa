@@ -25,7 +25,7 @@
         ?>
 			</nav>
 
-			<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/Belo-Sol.webp" alt="Rest"></h1>
+			<h1><img class="logotipo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/Belo-Sol.webp" alt="<?php bloginfo('name'); ?>"></h1>
 			<div class='dia-da-semana-container'>
 				<h2 id='dia-da-semana'></h2>
 				<span class='divisor'></span>
