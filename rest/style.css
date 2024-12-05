@@ -964,7 +964,7 @@ header div {
 }
 
 header div.animate {
-	animation: slideDownFadeIn 0.5s ease forwards;
+	animation: slideDownFadeIn 1.2s ease forwards;
 }
 
 @keyframes slideDownFadeIn {
