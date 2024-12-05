@@ -959,11 +959,11 @@ height: 22px;
   animation: slideDownFadeIn 1s ease forwards;
 }
 
-header div {
+header > * {
 	opacity: 0;
 }
 
-header *.animate {
+header > *.animate {
 	animation: slideDownFadeIn 1.2s ease forwards;
 }
 
