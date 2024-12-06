@@ -10,7 +10,7 @@
                         <li class="prato" 
                             data-exibir-prato="<?php the_sub_field('exibir-prato'); ?>"
                             <?php if( get_sub_field('exibir-prato') ) echo 'class="ativo"'; ?>>
-                            <span class="price" data-media-price="<?php the_sub_field('media_price'); ?>"><sup>R$</sup><?php the_sub_field('price'); ?></span>
+                            <span class="price" data-media-price="<?php the_sub_field('media_price') ; ?>" data-mini-price="<?php the_sub_field('price') ; ?>"><sup>R$</sup><?php the_sub_field('price'); ?></span>
                             <div>
                                 <h3><?php the_sub_field('food_name'); ?></h3>
                                 <p class="food_description"><?php the_sub_field('food_description'); ?></p>

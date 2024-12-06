@@ -30,7 +30,24 @@ function cloneSection(list, oldTitle, newTitle, att) {
           }
         })
       }
-      
+
+      function priceInline(listSelector, reference, attMedia, attMini) {
+        const foodMenuContainerList = document.querySelectorAll(listSelector);
+
+        foodMenuContainerList.forEach(foodMenuEl => {
+            let categoryTitle = foodMenuEl.firstElementChild.textContent;
+
+            if(categoryTitle == reference) {
+              const priceEl = foodMenuEl.querySelector('.price');
+              
+              const mediaPrice = priceEl.getAttribute(attMedia);
+              const miniPrice = priceEl.getAttribute(attMini);
+              priceEl.innerHTML = `<sup>R$</sup>${mediaPrice} - <sup>R$</sup>${miniPrice}`;
+            }
+        })
+      }
+
+      priceInline('.menu-prato', 'Assados', 'data-media-price', 'data-mini-price')
       changeWppLink()
 
     }
