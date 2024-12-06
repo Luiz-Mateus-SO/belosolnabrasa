@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function() {
   const section = document.querySelectorAll('.container');
   const pratos = document.querySelectorAll('.prato');
   const listaDePratos = document.querySelectorAll('.menu-prato ul')
@@ -43,3 +43,4 @@
   }
 
   init()
+})
